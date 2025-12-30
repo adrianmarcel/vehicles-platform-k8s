@@ -27,5 +27,5 @@ jobs:
       - name: Apply manifests
         run: |
           kubectl apply -f k8s/namespaces/
-          kubectl apply -f k8s/apps/
+          kubectl apply -f k8s/apps/vehicles-api/
           kubectl apply -f k8s/ingress/
