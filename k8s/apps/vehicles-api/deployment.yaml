@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vehicles-api
+  namespace: vehicles
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vehicles-api
+  template:
+    metadata:
+      labels:
+        app: vehicles-api
+    spec:
+      containers:
+        - name: vehicles-api
+          image: 122610488782.dkr.ecr.us-east-2.amazonaws.com/vehicles-api:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: vehicles-db-secret
+          env:
+            - name: SERVER_PORT
+              value: "8080"
