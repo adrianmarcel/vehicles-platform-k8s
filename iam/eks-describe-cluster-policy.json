@@ -7,7 +7,7 @@
         "Action": [
           "eks:DescribeCluster"
         ],
-        "Resource": "arn:aws:eks:us-east-2:122610488782:cluster/vehicles-cluster"
+        "Resource": "arn:aws:eks:us-east-2:122610488782:cluster/my-cluster"
       }
     ]
   }
