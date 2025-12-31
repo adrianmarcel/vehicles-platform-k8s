@@ -1,14 +1,11 @@
 {
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Sid": "DescribeEKSCluster",
-        "Effect": "Allow",
-        "Action": [
-          "eks:DescribeCluster"
-        ],
-        "Resource": "arn:aws:eks:us-east-2:122610488782:cluster/my-cluster"
-      }
-    ]
-  }
-  
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DescribeAnyEKSCluster",
+      "Effect": "Allow",
+      "Action": ["eks:DescribeCluster"],
+      "Resource": "arn:aws:eks:us-east-2:122610488782:cluster/*"
+    }
+  ]
+}

@@ -12,8 +12,11 @@ data:
         - system:masters
 kind: ConfigMap
 metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"mapRoles":"- rolearn: arn:aws:iam::122610488782:role/eksctl-my-cluster-nodegroup-standa-NodeInstanceRole-FRJeXMOF3Nea\n  groups:\n  - system:bootstrappers\n  - system:nodes\n  username: system:node:{{EC2PrivateDNSName}}\n- rolearn: arn:aws:iam::122610488782:role/GitHubActionsVehiclesEKSRole\n  username: github-actions\n  groups:\n    - system:masters\n"},"kind":"ConfigMap","metadata":{"annotations":{},"creationTimestamp":"2025-12-31T18:21:35Z","name":"aws-auth","namespace":"kube-system","resourceVersion":"1963","uid":"754e279f-0073-47d6-8a60-56f97f37d353"}}
   creationTimestamp: "2025-12-31T18:21:35Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1963"
+  resourceVersion: "4074"
   uid: 754e279f-0073-47d6-8a60-56f97f37d353
