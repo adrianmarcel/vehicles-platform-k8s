@@ -5,7 +5,4 @@ metadata:
   namespace: sales
 type: Opaque
 stringData:
-  SPRING_DATASOURCE_USERNAME: "admin_user"
-  SPRING_DATASOURCE_PASSWORD: "mysecret"
   VEHICLES_BASE_URL: "http://k8s-vehicles-vehicles-688b97eeb5-1318101442.us-east-2.elb.amazonaws.com"
-  SPRING_DATASOURCE_URL: "jdbc:postgresql://sales-rds.cbiwugmus6fw.us-east-2.rds.amazonaws.com:5432/sales_db"
