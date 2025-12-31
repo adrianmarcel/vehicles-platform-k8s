@@ -21,8 +21,9 @@ spec:
             - containerPort: 8080
           envFrom:
             - secretRef:
+                name: sales-db-secret
+            - secretRef:
                 name: sales-config
-          # opcional: readiness/liveness
           readinessProbe:
             httpGet:
               path: /actuator/health
