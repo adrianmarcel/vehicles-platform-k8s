@@ -2,8 +2,19 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: vehicles-cluster
+  name: my-cluster
   region: us-east-2
+
+vpc:
+  id: "vpc-03a048fdbf655aa3d"
+  subnets:
+    public:
+      us-east-2a:
+        id: "subnet-087f24b71b3598778"
+      us-east-2b:
+        id: "subnet-0383aa34aa784b619"
+      us-east-2c:
+        id: "subnet-039c2b6295d498fdf"
 
 managedNodeGroups:
   - name: standard-ng

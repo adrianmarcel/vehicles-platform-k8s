@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   mapRoles: |
-    - rolearn: arn:aws:iam::122610488782:role/eksctl-vehicles-cluster-nodegroup--NodeInstanceRole-b1PZqkeLFKBS
+    - rolearn: arn:aws:iam::122610488782:role/eksctl-my-cluster-nodegroup-standa-NodeInstanceRole-FRJeXMOF3Nea
       groups:
       - system:bootstrappers
       - system:nodes
@@ -9,11 +9,11 @@ data:
     - rolearn: arn:aws:iam::122610488782:role/GitHubActionsVehiclesEKSRole
       username: github-actions
       groups:
-      - system:masters
+        - system:masters
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2025-12-29T22:56:04Z"
+  creationTimestamp: "2025-12-31T18:21:35Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1270"
-  uid: 72b9815b-4775-4a52-9096-d8ccac6b3a2e
+  resourceVersion: "1963"
+  uid: 754e279f-0073-47d6-8a60-56f97f37d353
